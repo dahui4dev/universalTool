@@ -1,7 +1,5 @@
 {
     "schedule": "daily" // daily|weekly|monthly
-    "ignoredFiles": [
-      "timg.jpeg",              // by filename
-    ],
+    "ignoredFiles": [],
     "aggressiveCompression": true // true|false
 }
