@@ -11,7 +11,8 @@ import {
 } from 'react-native';
 
 import Swiper from 'react-native-swiper';
-import ListViewDemo from './ListViewDemo';
+import AnimatedParallel from './AnimatedParallel';
+import AnimatedRemix from './AnimatedRemix';
 
 const styles = StyleSheet.create({
   wrapper: {},
@@ -40,20 +41,19 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class swiper extends Component {
+export default class SwiperMain extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
         <Swiper style={styles.wrapper}>
           <View style={styles.slide1}>
-            <Text style={styles.text}>Hello Swiper</Text>
+            <AnimatedParallel />
           </View>
           <View style={styles.slide2}>
-            <ListViewDemo />
-            {/*<Text style={styles.text}>Beautiful</Text>*/}
+            <AnimatedRemix />
           </View>
           <View style={styles.slide3}>
-            <Text style={styles.text}>And simple</Text>
+            <AnimatedParallel />
           </View>
         </Swiper>
       </View>

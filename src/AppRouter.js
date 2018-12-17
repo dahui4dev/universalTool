@@ -3,15 +3,20 @@
  * https://github.com/facebook/react-native
  *
  * @format
- * @flow
  */
 
 import Home from "./app/view/Home";
-import Swiper from "./app/view/Swiper";
+import SwiperMain from "./app/view/SwiperMain";
+import AnimatedParallel from "./app/view/AnimatedParallel";
+import AnimatedSequence from "./app/view/AnimatedSequence";
+import AnimatedRemix from "./app/view/AnimatedRemix";
 
 const AppRouter = {
   Home: Home,
-  Swiper: Swiper
+  SwiperMain: SwiperMain,
+  AnimatedParallel: AnimatedParallel,
+  AnimatedSequence: AnimatedSequence,
+  AnimatedRemix: AnimatedRemix
 };
 
 export default AppRouter;

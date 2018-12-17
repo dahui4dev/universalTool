@@ -10,7 +10,7 @@ import NavigationBar from 'react-native-navbar';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Colors, Sizes } from './app/common/utStyles';
 import Home from './app/view/Home';
-import swiper from './app/view/Swiper';
+import swiper from './app/view/SwiperMain';
 
 
 export default class Main extends Component {

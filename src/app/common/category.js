@@ -10,7 +10,7 @@ const category = [
           alert('轮播');
         },
       },
-      component: require('../view/Swiper'),
+      component: require('../view/SwiperMain'),
     },
     uri: BUIcon[0],
     subcate1: '信用卡',
@@ -23,7 +23,7 @@ const category = [
           alert('轮播');
         },
       },
-      component: require('../view/Swiper'),
+      component: require('../view/SwiperMain'),
     },
     subcate2: '借记卡',
     cmpt2: {
@@ -35,7 +35,7 @@ const category = [
           alert('轮播');
         },
       },
-      component: require('../view/Swiper'),
+      component: require('../view/SwiperMain'),
     },
     subcate3: '支付宝',
     cmpt3: {
@@ -47,7 +47,7 @@ const category = [
           alert('轮播');
         },
       },
-      component: require('../view/Swiper'),
+      component: require('../view/SwiperMain'),
     },
     subcate4: '白条',
     cmpt4: {
@@ -59,7 +59,7 @@ const category = [
           alert('轮播');
         },
       },
-      component: require('../view/Swiper'),
+      component: require('../view/SwiperMain'),
     },
     bgColor: styles.sbu_red,
   },
