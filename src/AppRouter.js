@@ -10,13 +10,15 @@ import SwiperMain from "./app/view/SwiperMain";
 import AnimatedParallel from "./app/view/AnimatedParallel";
 import AnimatedSequence from "./app/view/AnimatedSequence";
 import AnimatedRemix from "./app/view/AnimatedRemix";
+import FloatingHeartsPage from "./app/view/FloatingHeartsPage";
 
 const AppRouter = {
   Home: Home,
   SwiperMain: SwiperMain,
   AnimatedParallel: AnimatedParallel,
   AnimatedSequence: AnimatedSequence,
-  AnimatedRemix: AnimatedRemix
+  AnimatedRemix: AnimatedRemix,
+  FloatingHeartsPage: FloatingHeartsPage
 };
 
 export default AppRouter;

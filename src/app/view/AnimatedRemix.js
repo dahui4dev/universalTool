@@ -12,6 +12,17 @@ import {
 const { height, width } = Dimensions.get("window");
 
 export default class AnimatedRemix extends React.Component {
+  static navigationOptions = {
+    title: "混合执行",
+    headerStyle: {
+      backgroundColor: "#FC9720"
+    },
+    headerTintColor: "#0f0f0f",
+    headerTitleStyle: {
+      fontWeight: "bold"
+    }
+  };
+
   constructor(props) {
     super(props);
     this.state = {

@@ -5,7 +5,7 @@
  */
 
 import React from "react";
-import { Image, View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -99,14 +99,14 @@ export default class Home extends React.Component {
     if (cmpt) {
       navigate(cmpt.cmptName);
     } else {
-      alert("正在开发中。。。");
+      alert("flag先立着，内容还的再等等..😊");
     }
   }
 
   render() {
     const FUNCS = [
       {
-        category: "轮播组件",
+        category: "各种动画",
         cmpt: { cmptName: "SwiperMain" },
         uri: BUIcon[0],
         subcate1: "parallel",
@@ -120,11 +120,13 @@ export default class Home extends React.Component {
         bgColor: styles.sbu_red
       },
       {
-        category: "🚩︎",
+        category: "特效︎",
         uri: BUIcon[1],
-        subcate1: "🚩︎",
-        subcate2: "🚩︎",
-        subcate3: "🚩︎",
+        subcate1: "点赞飘心",
+        cmpt1: { cmptName: "FloatingHeartsPage" },
+        subcate2: "缓动动效︎",
+        subcate3: "加购物车",
+        cmpt3: { cmptName: "AddCartPage" },
         subcate4: "🚩︎",
         bgColor: styles.sbu_blue
       },

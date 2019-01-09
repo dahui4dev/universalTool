@@ -1,17 +1,12 @@
 /* 同时运行 */
 import React from 'react'
-import {
-  Animated,
-  Easing,
-  StyleSheet,
-  Dimensions
-} from 'react-native';
+import { Animated, Dimensions, Easing, StyleSheet } from 'react-native';
 
-const { height, width } = Dimensions.get('window')
+const { height, width } = Dimensions.get('window');
 
 export default class AnimatedParallel extends React.Component {
   static navigationOptions = {
-    title: "parallel",
+    title: "同时执行",
     headerStyle: {
       backgroundColor: "#27fbb7"
     },
