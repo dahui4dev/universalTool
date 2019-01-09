@@ -8,7 +8,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import FloatingHearts from "../components/FloatingHearts";
 
 
-class FloatingHeartsPage extends React.Component {
+export default class FloatingHeartsPage extends React.Component {
   static navigationOptions = {
     title: "直播点赞飘心",
     headerStyle: {
@@ -74,5 +74,3 @@ const styles = StyleSheet.create({
     fontSize: 16
   }
 });
-
-export default FloatingHeartsPage;

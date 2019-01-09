@@ -1,97 +1,72 @@
-/* eslint-disable react/jsx-filename-extension */
 /**
+ * 主页
  * Created by Dennis Wang
  * on 2017/1/2 PM10:36
  */
 
 import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Button,
+  Dimensions,
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
+} from "react-native";
+const { height, width } = Dimensions.get("window");
+const ITEM_HEIGHT = 100;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
+const FUNCS = [
+  {
+    category: "各种动画",
+    cmpt: { cmptName: "CarouselMain" },
+    iconPath: require("../images/001.gif"),
+    subcate1: "parallel",
+    cmpt1: { cmptName: "AnimatedParallel" },
+    subcate2: "remix",
+    cmpt2: { cmptName: "AnimatedRemix" },
+    subcate3: "Sequence",
+    cmpt3: { cmptName: "AnimatedSequence" },
+    subcate4: "",
+    cmpt4: { cmptName: "AnimatedStaggere" },
+    bgColor: "#FA6778"
   },
-
-  // sbu
-  sbu_view: {
-    height: 84,
-    marginLeft: 5,
-    marginRight: 5,
-    borderWidth: 1,
-    borderRadius: 5,
-    marginBottom: 10,
-    flexDirection: "row"
+  {
+    category: "特效︎",
+    iconPath: require("../images/004.gif"),
+    subcate1: "点赞飘心",
+    cmpt1: { cmptName: "FloatingHeartsPage" },
+    subcate2: "缓动动效︎",
+    cmpt2: { cmptName: "FloatingHeartsPage" },
+    subcate3: "加购物车",
+    cmpt3: { cmptName: "AddCartPage" },
+    subcate4: "🚩︎",
+    bgColor: "#3D98FF"
   },
-  sbu_red: {
-    backgroundColor: "#FA6778",
-    borderColor: "#FA6778"
-  },
-
-  sbu_blue: {
-    backgroundColor: "#3D98FF",
-    borderColor: "#3D98FF"
-  },
-
-  sbu_green: {
-    backgroundColor: "#5EBE00",
-    borderColor: "#5EBE00"
-  },
-
-  sbu_yellow: {
-    backgroundColor: "#FC9720",
-    borderColor: "#FC9720"
-  },
-  sbu_flex: {
-    flex: 1
-  },
-  sbu_borderRight: {
-    borderColor: "#fff",
-    borderRightWidth: 0.5
-  },
-  sbu_icon_img: {
-    height: 40,
-    width: 40
-  },
-  sub_con_flex: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  sub_text: {
-    justifyContent: "center"
-  },
-  font16: {
-    fontSize: 16,
-    color: "#FFF",
-    fontWeight: "bold"
-  },
-  sbu_borderBottom: {
-    borderBottomWidth: 0.5,
-    borderBottomColor: "#fff"
+  {
+    category: "🚩︎",
+    iconPath: require("../images/icon_dribble.gif"),
+    subcate1: "🚩︎",
+    subcate2: "🚩︎",
+    subcate3: "🚩︎",
+    subcate4: "🚩︎",
+    bgColor: "#5EBE00"
   }
-});
-
-// 图标图片
-const BUIcon = [
-  "https://raw.githubusercontent.com/vczero/vczero.github.io/master/ctrip/%E6%9C%AA%E6%A0%87%E9%A2%98-1.png",
-  "https://raw.githubusercontent.com/vczero/vczero.github.io/master/ctrip/feiji.png",
-  "https://raw.githubusercontent.com/vczero/vczero.github.io/master/ctrip/lvyou.png",
-  "https://raw.githubusercontent.com/vczero/vczero.github.io/master/ctrip/gonglue.png"
 ];
 
-export default class Home extends React.Component {
+class Home extends React.Component {
   static navigationOptions = {
     title: "主页",
     headerStyle: {
-      backgroundColor: "#1898fb"
+      backgroundColor: "#ffffff"
     },
-    headerTintColor: "#fff",
+    headerTintColor: "#4693ff",
     headerTitleStyle: {
       fontWeight: "bold"
-    }
+    },
+    headerMode: "none"
   };
 
   _openPage(cmpt) {
@@ -104,80 +79,41 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const FUNCS = [
-      {
-        category: "各种动画",
-        cmpt: { cmptName: "SwiperMain" },
-        uri: BUIcon[0],
-        subcate1: "parallel",
-        cmpt1: { cmptName: "AnimatedParallel" },
-        subcate2: "remix",
-        cmpt2: { cmptName: "AnimatedRemix" },
-        subcate3: "Sequence",
-        cmpt3: { cmptName: "AnimatedSequence" },
-        subcate4: "",
-        cmpt4: { cmptName: "AnimatedStaggere" },
-        bgColor: styles.sbu_red
-      },
-      {
-        category: "特效︎",
-        uri: BUIcon[1],
-        subcate1: "点赞飘心",
-        cmpt1: { cmptName: "FloatingHeartsPage" },
-        subcate2: "缓动动效︎",
-        subcate3: "加购物车",
-        cmpt3: { cmptName: "AddCartPage" },
-        subcate4: "🚩︎",
-        bgColor: styles.sbu_blue
-      },
-      {
-        category: "🚩︎",
-        uri: BUIcon[2],
-        subcate1: "🚩︎",
-        subcate2: "🚩︎",
-        subcate3: "🚩︎",
-        subcate4: "🚩︎",
-        bgColor: styles.sbu_green
-      },
-      {
-        category: "🚩︎",
-        uri: BUIcon[3],
-        subcate1: "🚩︎",
-        subcate2: "🚩︎",
-        subcate3: "🚩︎",
-        subcate4: "🚩︎",
-        bgColor: styles.sbu_yellow
-      }
-    ];
-
     return (
-      <View
-        style={{
-          flex: 1,
-          alignItems: "center",
-          backgroundColor: "#FFFFFF",
-          paddingTop: 5
-        }}
-      >
+      <View style={styles.container}>
         {FUNCS.map((category, i) => (
-          <View style={[category.bgColor, styles.sbu_view]} key={i}>
+          <View
+            style={[
+              {
+                backgroundColor: category.bgColor,
+                borderColor: category.bgColor
+              },
+              styles.sbu_view
+            ]}
+            key={i}
+          >
             <TouchableOpacity
               activeOpacity={0.8}
               underlayColor={"#FA6778"}
               style={{ flex: 1 }}
               onPress={this._openPage.bind(this, category.cmpt)}
             >
-              <View style={[styles.sbu_flex, styles.sbu_borderRight]}>
-                <View style={[styles.sub_con_flex, styles.sub_text]}>
-                  <Text style={[styles.font16]}>{category.category}</Text>
-                </View>
-                <View style={[styles.sub_con_flex]}>
-                  <Image
-                    style={[styles.sbu_icon_img]}
-                    resizeMode={"contain"}
-                    source={{ uri: category.uri }}
-                  />
-                </View>
+              <View
+                style={[
+                  styles.sbu_flex,
+                  {
+                    alignItems: "center",
+                    justifyContent: "center"
+                  },
+                  styles.sbu_borderRight
+                ]}
+              >
+                <Text style={[styles.font16]}>{category.category}</Text>
+                <Image
+                  style={[styles.sbu_icon_img]}
+                  resizeMode={"contain"}
+                  source={category.iconPath}
+                />
               </View>
             </TouchableOpacity>
 
@@ -228,3 +164,161 @@ export default class Home extends React.Component {
     );
   }
 }
+
+export default Home;
+
+class FlatListExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      refreshing: false
+    };
+  }
+
+  _renderItem = item => {
+    let item1 = item;
+    let txt = "第" + item1.index + "个" + " title=" + item1.item.title;
+    let bgColor = item1.index % 2 === 0 ? "red" : "blue";
+    return (
+      <TouchableOpacity
+        onPress={() => {
+          alert(txt);
+        }}
+      >
+        <Text
+          style={[
+            {
+              flex: 1,
+              height: ITEM_HEIGHT,
+              backgroundColor: bgColor,
+              width: width / 3
+            },
+            styles.txt
+          ]}
+        >
+          {txt}
+        </Text>
+      </TouchableOpacity>
+    );
+  };
+
+  _header = () => {
+    return (
+      <Text style={[styles.txt, { backgroundColor: "black" }]}>这是头部</Text>
+    );
+  };
+
+  _footer = () => {
+    return (
+      <Text style={[styles.txt, { backgroundColor: "black" }]}>这是尾部</Text>
+    );
+  };
+  _separator = () => {
+    return <View style={{ height: 2, backgroundColor: "yellow" }} />;
+  };
+
+  _onRefresh() {
+    // alert("正在刷新中.... ");
+  }
+
+  render() {
+    let data = [];
+    for (let i = 0; i < 31; i++) {
+      data.push({ key: i, title: i + "" });
+    }
+    return (
+      <View style={{ flex: 1 }}>
+        <Button
+          title="滚动到指定位置"
+          onPress={() => {
+            //this._flatList.scrollToEnd();
+            //this._flatList.scrollToIndex({viewPosition:0,index:8});
+            this._flatList.scrollToOffset({ animated: true, offset: 1000 });
+          }}
+        />
+        <View style={{ flex: 1 }}>
+          <FlatList
+            ref={flatList => (this._flatList = flatList)}
+            ListHeaderComponent={this._header}
+            ListFooterComponent={this._footer}
+            ItemSeparatorComponent={this._separator}
+            renderItem={this._renderItem}
+            horizontal={false}
+            numColumns={3}
+            columnWrapperStyle={{ borderWidth: 2, borderColor: "black" }}
+            refreshing={this.state.refreshing}
+            getItemLayout={(data, index) => ({
+              length: ITEM_HEIGHT,
+              offset: (ITEM_HEIGHT + 2) * index,
+              index
+            })}
+            onRefresh={this._onRefresh}
+            onEndReachedThreshold={0.1}
+            onEndReached={info => {
+              // alert("滑动到底部了");
+            }}
+            onViewableItemsChanged={info => {
+              //    alert("可见不可见触发");
+            }}
+            data={data}
+          />
+        </View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "#FFFFFF",
+    paddingTop: 5
+  },
+
+  // sbu
+  sbu_view: {
+    height: 155,
+    marginLeft: 5,
+    marginRight: 5,
+    borderWidth: 1,
+    borderRadius: 5,
+    marginBottom: 10,
+    flexDirection: "row"
+  },
+  sbu_flex: {
+    flex: 1
+  },
+  sbu_borderRight: {
+    borderColor: "#fff",
+    borderRightWidth: 0.5
+  },
+  sbu_icon_img: {
+    height: 55
+    // width: 60
+  },
+  sub_con_flex: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  sub_text: {
+    justifyContent: "center"
+  },
+  font16: {
+    fontSize: 16,
+    color: "#FFF",
+    fontWeight: "bold"
+  },
+  sbu_borderBottom: {
+    borderBottomWidth: 0.5,
+    borderBottomColor: "#fff"
+  },
+
+  txt: {
+    textAlign: "center",
+    textAlignVertical: "center",
+    color: "white",
+    fontSize: 30
+  }
+});

@@ -1,24 +1,28 @@
 /**
- * Sample React Native App
+ * Sample React Native App Router
  * https://github.com/facebook/react-native
  *
  * @format
  */
 
 import Home from "./app/view/Home";
-import SwiperMain from "./app/view/SwiperMain";
+import CarouselMain from "./app/view/CarouselMain";
 import AnimatedParallel from "./app/view/AnimatedParallel";
 import AnimatedSequence from "./app/view/AnimatedSequence";
 import AnimatedRemix from "./app/view/AnimatedRemix";
 import FloatingHeartsPage from "./app/view/FloatingHeartsPage";
+import AddCartPage from "./app/view/AddCartPage";
 
 const AppRouter = {
   Home: Home,
-  SwiperMain: SwiperMain,
+  CarouselMain: CarouselMain,
   AnimatedParallel: AnimatedParallel,
   AnimatedSequence: AnimatedSequence,
   AnimatedRemix: AnimatedRemix,
-  FloatingHeartsPage: FloatingHeartsPage
+  FloatingHeartsPage: FloatingHeartsPage,
+  AddCartPage: {
+    screen: AddCartPage,
+  }
 };
 
 export default AppRouter;

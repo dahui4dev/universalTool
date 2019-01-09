@@ -1,4 +1,6 @@
-/* 混合运行 */
+/**
+ * 混合运行
+ */
 import React from "react";
 import {
   Animated,
