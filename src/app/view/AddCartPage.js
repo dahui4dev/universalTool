@@ -40,82 +40,26 @@ class AddCartPage extends React.Component {
 
     const animation = {
       id: `${animationNo}`,
-      container: {
-        zIndex: 100,
-        position: "absolute",
-        left,
-        bottom,
-        opacity,
-        transform: [{ scale }],
-        width: 80,
-        height: 80,
-        backgroundColor: "transparent"
-      },
-      image: {
-        borderRadius: 40,
-        width: 80,
-        height: 80
-      }
+      container: { zIndex: 100, position: "absolute", left, bottom, opacity, transform: [{ scale }],
+        width: 80, height: 80, backgroundColor: "transparent" },
+      image: { borderRadius: 40, width: 80, height: 80 }
     };
 
     Animated.sequence([
-      Animated.timing(scale, {
-        toValue: 1,
-        duration: 200,
-        easing: Easing.linear,
-        seNativeDriver: true
-      }),
-      Animated.timing(scale, {
-        toValue: 1.25,
-        duration: 70,
-        easing: Easing.linear,
-        seNativeDriver: true
-      }),
-      Animated.timing(scale, {
-        toValue: 1,
-        duration: 70,
-        easing: Easing.linear,
-        seNativeDriver: true
-      }),
-      Animated.timing(scale, {
-        delay: 60,
-        toValue: 0.25,
-        duration: 500,
-        easing: Easing.linear,
-        seNativeDriver: true
-      })
+      Animated.timing(scale, { toValue: 1, duration: 200, easing: Easing.linear, seNativeDriver: true }),
+      Animated.timing(scale, { toValue: 1.25, duration: 70, easing: Easing.linear, seNativeDriver: true }),
+      Animated.timing(scale, { toValue: 1, duration: 70, easing: Easing.linear, seNativeDriver: true }),
+      Animated.timing(scale, { delay: 60, toValue: 0.25, duration: 500, easing: Easing.linear, seNativeDriver: true })
     ]).start();
 
     Animated.sequence([
-      Animated.timing(bottom, {
-        toValue: initialBottom + 100,
-        duration: 200,
-        easing: Easing.linear,
-        seNativeDriver: true
-      }),
-      Animated.timing(bottom, {
-        delay: 200,
-        toValue: 80,
-        duration: 500,
-        easing: Easing.in(Easing.quad),
-        seNativeDriver: true
-      })
+      Animated.timing(bottom, { toValue: initialBottom + 100, duration: 200, easing: Easing.linear, seNativeDriver: true }),
+      Animated.timing(bottom, { delay: 200, toValue: 80, duration: 500, easing: Easing.in(Easing.quad), seNativeDriver: true })
     ]).start();
 
     Animated.sequence([
-      Animated.timing(left, {
-        toValue: 140,
-        duration: 200,
-        easing: Easing.linear,
-        seNativeDriver: true
-      }),
-      Animated.timing(left, {
-        delay: 200,
-        toValue: 310,
-        duration: 510,
-        easing: Easing.linear,
-        seNativeDriver: true
-      })
+      Animated.timing(left, { toValue: 140, duration: 200, easing: Easing.linear, seNativeDriver: true }),
+      Animated.timing(left, { delay: 200, toValue: 310, duration: 510, easing: Easing.linear, seNativeDriver: true })
     ]).start();
 
     this.setState({

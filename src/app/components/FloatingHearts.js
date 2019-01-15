@@ -101,6 +101,7 @@ FloatingHearts.defaultProps = {
 };
 
 /**
+ * 飘心组件
  * @class AnimatedShape
  */
 

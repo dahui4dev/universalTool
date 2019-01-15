@@ -33,21 +33,15 @@ export default class AnimatedRemix extends React.Component {
   }
 
   componentDidMount() {
-    const timing = Animated.timing;
     Animated.sequence([
       Animated.stagger(
         400,
-        this.state.anim
-          .map(left => {
-            return timing(left, {
-              toValue: 1
-            });
+        this.state.anim.map(left => {
+            return Animated.timing(left, { toValue: 1 });
           })
           .concat(
             this.state.anim.map(left => {
-              return timing(left, {
-                toValue: 0
-              });
+              return Animated.timing(left, { toValue: 0 });
             })
           )
       ),
@@ -55,19 +49,19 @@ export default class AnimatedRemix extends React.Component {
 
       // 延迟1000ms，配合sequence使用
       Animated.delay(1000),
-      timing(this.state.anim[0], {
+      Animated.timing(this.state.anim[0], {
         toValue: 1
       }),
-      timing(this.state.anim[1], {
+      Animated.timing(this.state.anim[1], {
         toValue: -1
       }),
-      timing(this.state.anim[2], {
+      Animated.timing(this.state.anim[2], {
         toValue: 0.5
       }),
       Animated.delay(1000),
       Animated.parallel(
         this.state.anim.map(anim =>
-          timing(anim, {
+          Animated.timing(anim, {
             toValue: 0
           })
         )

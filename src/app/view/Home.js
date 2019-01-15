@@ -20,25 +20,25 @@ const ITEM_HEIGHT = 100;
 
 const FUNCS = [
   {
-    category: "各种动画",
+    category: "基础动画",
     cmpt: { cmptName: "CarouselMain" },
-    iconPath: require("../images/001.gif"),
-    subcate1: "parallel",
+    iconPath: require("../images/gonglue.png"),
+    subcate1: "并行动画",
     cmpt1: { cmptName: "AnimatedParallel" },
-    subcate2: "remix",
+    subcate2: "混合动画",
     cmpt2: { cmptName: "AnimatedRemix" },
-    subcate3: "Sequence",
+    subcate3: "顺序执行",
     cmpt3: { cmptName: "AnimatedSequence" },
     subcate4: "",
     cmpt4: { cmptName: "AnimatedStaggere" },
     bgColor: "#FA6778"
   },
   {
-    category: "特效︎",
-    iconPath: require("../images/004.gif"),
+    category: "组合特效︎",
+    iconPath: require("../images/feiji.png"),
     subcate1: "点赞飘心",
     cmpt1: { cmptName: "FloatingHeartsPage" },
-    subcate2: "缓动动效︎",
+    subcate2: "🚩︎",
     cmpt2: { cmptName: "FloatingHeartsPage" },
     subcate3: "加购物车",
     cmpt3: { cmptName: "AddCartPage" },
@@ -46,8 +46,8 @@ const FUNCS = [
     bgColor: "#3D98FF"
   },
   {
-    category: "🚩︎",
-    iconPath: require("../images/icon_dribble.gif"),
+    category: "手势系统",
+    iconPath: require("../images/lvyou.png"),
     subcate1: "🚩︎",
     subcate2: "🚩︎",
     subcate3: "🚩︎",
@@ -108,12 +108,13 @@ class Home extends React.Component {
                   styles.sbu_borderRight
                 ]}
               >
-                <Text style={[styles.font16]}>{category.category}</Text>
                 <Image
                   style={[styles.sbu_icon_img]}
                   resizeMode={"contain"}
                   source={category.iconPath}
                 />
+                <View style={{height: 3}}/>
+                <Text style={[styles.font18]}>{category.category}</Text>
               </View>
             </TouchableOpacity>
 
@@ -294,8 +295,8 @@ const styles = StyleSheet.create({
     borderRightWidth: 0.5
   },
   sbu_icon_img: {
-    height: 55
-    // width: 60
+    height: 55,
+    width: 60
   },
   sub_con_flex: {
     flex: 1,
@@ -307,6 +308,11 @@ const styles = StyleSheet.create({
   },
   font16: {
     fontSize: 16,
+    color: "#FFF",
+    fontWeight: "bold"
+  },
+  font18: {
+    fontSize: 18,
     color: "#FFF",
     fontWeight: "bold"
   },
