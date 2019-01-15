@@ -12,6 +12,7 @@ import AnimatedSequence from "./app/view/AnimatedSequence";
 import AnimatedRemix from "./app/view/AnimatedRemix";
 import FloatingHeartsPage from "./app/view/FloatingHeartsPage";
 import AddCartPage from "./app/view/AddCartPage";
+import PanResponderExample from './app/view/PanResponderExample'
 
 const AppRouter = {
   Home: Home,
@@ -20,6 +21,7 @@ const AppRouter = {
   AnimatedSequence: AnimatedSequence,
   AnimatedRemix: AnimatedRemix,
   FloatingHeartsPage: FloatingHeartsPage,
+  PanResponderExample: PanResponderExample,
   AddCartPage: {
     screen: AddCartPage,
   }

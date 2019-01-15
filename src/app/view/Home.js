@@ -48,7 +48,8 @@ const FUNCS = [
   {
     category: "手势系统",
     iconPath: require("../images/lvyou.png"),
-    subcate1: "🚩︎",
+    subcate1: "简单手势",
+    cmpt1: { cmptName: "PanResponderExample" },
     subcate2: "🚩︎",
     subcate3: "🚩︎",
     subcate4: "🚩︎",
@@ -113,7 +114,7 @@ class Home extends React.Component {
                   resizeMode={"contain"}
                   source={category.iconPath}
                 />
-                <View style={{height: 3}}/>
+                <View style={{ height: 3 }} />
                 <Text style={[styles.font18]}>{category.category}</Text>
               </View>
             </TouchableOpacity>
