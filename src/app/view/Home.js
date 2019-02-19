@@ -51,7 +51,8 @@ const FUNCS = [
     subcate1: "简单手势",
     cmpt1: { cmptName: "PanResponderExample" },
     subcate2: "🚩︎",
-    subcate3: "🚩︎",
+    subcate3: "手势实例",
+    cmpt3: { cmptName: "PanResponderCarousel" },
     subcate4: "🚩︎",
     bgColor: "#5EBE00"
   }
