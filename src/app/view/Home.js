@@ -48,9 +48,11 @@ const FUNCS = [
   {
     category: "手势系统",
     iconPath: require("../images/lvyou.png"),
-    subcate1: "简单手势",
-    cmpt1: { cmptName: "PanResponderExample" },
-    subcate2: "🚩︎",
+
+    subcate1: "按钮",
+    cmpt1: { cmptName: "TouchExample" },
+    subcate2: "简单手势︎",
+    cmpt2: { cmptName: "PanResponderExample" },
     subcate3: "手势实例",
     cmpt3: { cmptName: "PanResponderCarousel" },
     subcate4: "🚩︎",
