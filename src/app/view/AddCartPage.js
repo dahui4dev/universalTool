@@ -49,12 +49,12 @@ class AddCartPage extends React.Component {
       Animated.timing(scale, { toValue: 1, duration: 200, easing: Easing.linear, seNativeDriver: true }),
       Animated.timing(scale, { toValue: 1.25, duration: 70, easing: Easing.linear, seNativeDriver: true }),
       Animated.timing(scale, { toValue: 1, duration: 70, easing: Easing.linear, seNativeDriver: true }),
-      Animated.timing(scale, { delay: 60, toValue: 0.25, duration: 500, easing: Easing.linear, seNativeDriver: true })
+      Animated.timing(scale, { toValue: 0.25, delay: 60, duration: 500, easing: Easing.linear, seNativeDriver: true })
     ]).start();
 
     Animated.sequence([
       Animated.timing(bottom, { toValue: initialBottom + 100, duration: 200, easing: Easing.linear, seNativeDriver: true }),
-      Animated.timing(bottom, { delay: 200, toValue: 80, duration: 500, easing: Easing.in(Easing.quad), seNativeDriver: true })
+      Animated.timing(bottom, { toValue: 80, delay: 200, duration: 500, easing: Easing.in(Easing.quad), seNativeDriver: true })
     ]).start();
 
     Animated.sequence([
